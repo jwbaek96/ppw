@@ -52,9 +52,6 @@ header{
     cursor: pointer;
     transition: transform ease-in-out .3s;
 }
-.menu-btn i{
-    font-size: 90px;
-}
 #menu-btn-checkbox:checked ~ .menu-btn{
     transform: rotateZ(45deg);
 }
@@ -67,7 +64,20 @@ header{
         color: var(--cfff);
     }
 }
-
+@media (max-width: 1000px){
+    .homelogo{
+        font-size: 5em;
+    }
+}   
+@media (max-width: 700px){
+    .homelogo{
+        font-size: 2.5em;
+    }
+    .menu-btn{
+        font-size: 2.2em;
+        margin: 0 10px;
+    }
+}   
 /* ----------------------- */
 .dpnone{
     display: none;
