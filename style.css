@@ -29,7 +29,7 @@ body{
 }
 /* ------------------- */
 header{
-    border: var(--boroder-check);
+    border-bottom: var(--boroder-check);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,7 +37,7 @@ header{
     overflow-x: hidden;
 }
 .homelogo{ 
-    border: var(--boroder-check);
+    /* border: var(--boroder-check); */
     text-transform: uppercase;
     font-size: 8em;
     cursor: pointer;
@@ -64,6 +64,31 @@ header{
         color: var(--cfff);
     }
 }
+/* ----------------------- */
+main{
+    border: var(--boroder-check);
+    padding: 5px;
+    width: 100%;
+}
+.cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#focused-title{
+    border: var(--boroder-check);
+    width: 100%;
+    font-size: 3em;
+}
+.card{
+    border: var(--boroder-check);
+    padding: 5px;
+    width: 300px;
+    height: 400px;
+}
+/* ----------------------- */
 @media (max-width: 1000px){
     .homelogo{
         font-size: 5em;
