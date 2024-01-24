@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+:root{
+    --boroder-check: 1px #000 solid;
+
+    --c000: #000;
+    --cfff: #fff;
+}
+*{
+    font-family: 'Pretendard-Regular', Helvetica,sans-serif ,serif;
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+html{
+    width: 100vw;
+    height: 100vh;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+/* ------------------- */
+header{
+    border: var(--boroder-check);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    overflow-x: hidden;
+}
+.homelogo{ 
+    border: var(--boroder-check);
+    text-transform: uppercase;
+    font-size: 8em;
+    cursor: pointer;
+}
+.menu-btn{
+    /* border: var(--boroder-check); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 90px;
+    margin: 0 30px;
+    cursor: pointer;
+    transition: transform ease-in-out .3s;
+}
+.menu-btn i{
+    font-size: 90px;
+}
+#menu-btn-checkbox:checked ~ .menu-btn{
+    transform: rotateZ(45deg);
+}
+.side > .menuitem{
+    width: 100%;
+    color: var(--c000);
+    padding: 2px 5px;
+    &:hover{
+        background-color: var(--c000);
+        color: var(--cfff);
+    }
+}
+
+/* ----------------------- */
+.dpnone{
+    display: none;
+}
