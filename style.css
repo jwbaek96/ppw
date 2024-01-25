@@ -38,8 +38,8 @@ body{
 /* ------------------- */
 header{
     border-bottom: var(--boroder-check);
-    /* position: fixed; */
-    position: relative;
+    position: fixed;
+    /* position: relative; */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -47,14 +47,25 @@ header{
     padding: 10px 5px;
     overflow: hidden;
     background-color: var(--cfff);
+    z-index: 100;
+}
+.topsizing{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    overflow: hidden;
+    background-color: var(--cfff);
+    color: var(--cfff);
     /* z-index: 100; */
 }
-@supports(position: sticky){
+/* @supports(position: sticky){
     header{
         position: sticky;
         top: 0;
     }
-}
+} */
 .homelogo{ 
     /* border: var(--boroder-check); */
     text-transform: uppercase;
@@ -76,9 +87,17 @@ header{
     transform: rotateZ(45deg);
 }
 /* 메뉴---------------------- */
-.menu{
-    /* transform: translateY(-100%); */
+/* #menu-btn-checkbox:checked ~ .menu{
+    transform: translateY(0%);
+} */
+#menu{
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform ease-in-out .3s;
+    width: 100%;
     border-bottom: var(--boroder-check);
+    background-color: var(--cfff);
+    z-index: 99;
 }
 .menuitem{
     width: 100%;
