@@ -125,8 +125,8 @@ main{
     /* border: var(--boroder-check); */
     position: relative;
     padding: 5px;
-    width: 300px;
-    height: 400px;
+    width: 250px;
+    height: 350px;
     margin: 2px auto;
     background-image: url();
 }
