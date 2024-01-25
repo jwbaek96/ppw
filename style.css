@@ -19,6 +19,11 @@
     padding: 0;
     text-decoration: none;
 }
+a, button{
+    border: 0;
+    outline: none;
+    color: inherit;
+}
 html{
     width: 100vw;
     height: 100vh;
@@ -33,19 +38,29 @@ body{
 /* ------------------- */
 header{
     border-bottom: var(--boroder-check);
+    /* position: fixed; */
+    position: relative;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 5px;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: var(--cfff);
-
+    /* z-index: 100; */
+}
+@supports(position: sticky){
+    header{
+        position: sticky;
+        top: 0;
+    }
 }
 .homelogo{ 
     /* border: var(--boroder-check); */
     text-transform: uppercase;
     font-size: 8em;
     cursor: pointer;
+    transition: font-size ease-in-out .2s;
 }
 .menu-btn{
     /* border: var(--boroder-check); */
@@ -55,12 +70,17 @@ header{
     font-size: 90px;
     margin: 0 30px;
     cursor: pointer;
-    transition: transform ease-in-out .3s;
+    transition: transform ease-in-out .3s,font-size ease-in-out .2s;
 }
 #menu-btn-checkbox:checked ~ .menu-btn{
     transform: rotateZ(45deg);
 }
-.side > .menuitem{
+/* 메뉴---------------------- */
+.menu{
+    /* transform: translateY(-100%); */
+    border-bottom: var(--boroder-check);
+}
+.menuitem{
     width: 100%;
     color: var(--c000);
     padding: 2px 5px;
@@ -71,14 +91,14 @@ header{
 }
 /* ----------------------- */
 main{
-    border: var(--boroder-check);
+    border-left: var(--boroder-check);
+    border-right: var(--boroder-check);
     padding: 5px;
     width: 100%;
 }
 .cards{
     width: 100%;
     display: flex;
-    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -92,6 +112,7 @@ main{
     padding: 5px;
     width: 300px;
     height: 400px;
+    margin: 2px auto;
 }
 /* ----------------------- */
 @media (max-width: 1000px){
