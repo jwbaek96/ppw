@@ -38,6 +38,8 @@ header{
     align-items: center;
     padding: 10px 5px;
     overflow-x: hidden;
+    background-color: var(--cfff);
+
 }
 .homelogo{ 
     /* border: var(--boroder-check); */
