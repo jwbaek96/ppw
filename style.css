@@ -125,10 +125,9 @@ main{
     /* border: var(--boroder-check); */
     position: relative;
     padding: 5px;
-    width: 250px;
-    height: 300px;
+    /* width: 250px;
+    height: 300px; */
     margin: 2px auto;
-    background-image: url();
     transition: scale ease-in-out.2s;
 }
 /* .card:hover{
