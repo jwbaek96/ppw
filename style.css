@@ -121,16 +121,19 @@ main{
 /* ----------------------- */
 .cards-container{
     /* border: var(--boroder-check); */
-    /* display: inline-block; */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* gap: 5px; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    grid-template-rows: repeat(4,200px);
 }
 .card{
-    flex: 1 0 300px;
+    /* flex: 1 0 300px; */
     /* min-width: 180px; */
     /* max-width: 282px; */
-    max-height: 200px;
+    /* max-height: 200px; */
     /* border: var(--boroder-check); */
     position: relative;
     display: inline-block;
