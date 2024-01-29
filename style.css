@@ -6,6 +6,7 @@
 }
 :root{
     --boroder-check: 1px #000 solid;
+    --boroder-radius: 1em;
 
     --c000: #000;
     --cfff: #fff;
@@ -25,6 +26,7 @@ a, button{
     outline: none;
     color: inherit;
 }
+ul, ol, li {list-style: none;}
 html{
     width: 100vw;
     height: 100vh;
@@ -111,11 +113,8 @@ header{
 }
 /* ----------------------- */
 main{
-    /* border-right: var(--boroder-check); */
     padding: 20px 5px 5px 5px;
     width: 100%;
-    /* display: flex; */
-    /* justify-content: center; */
     background-color: var(--cfff);
 }
 /* ----------------------- */
@@ -123,87 +122,15 @@ main{
     /* border: var(--boroder-check); */
     /* display: flex;
     flex-wrap: wrap; */
-    /* gap: 4px; */
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     /* grid-auto-rows: minmax(150px,250px); */
-    grid-auto-rows: 220px;
+    grid-auto-rows: 200px;
+    grid-gap: 4px;
     overflow-y: hidden;
-}
-.card{
-    /* flex: 1 0 300px; */
-    /* min-width: 180px; */
-    /* max-width: 282px; */
-    /* max-height: 200px; */
-    /* border: var(--boroder-check); */
-    position: relative;
-    display: inline-block;
-    overflow-y: hidden;
-    transition: scale ease-in-out.2s;
-    margin-bottom: 5px;
-    z-index: 1;
-}
-.card img{
-    width: 100%;
-}
-.card:hover{
-    scale: .98;
-}
-.card-gradient{
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
-    z-index: 9;
-}
-.card-footer{
-    position:absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    /* height: 70px; */
-    height: 2em;
-    padding: 3px;
-    z-index: 10;
-    overflow: hidden;
-}
-.card-footer > .cf-text,
-.card-footer > .cf-bg{
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.cf-text{
-    color: var(--c000);
-    transition: color ease-in-out .2s;
-    z-index: 2;
-    font-weight: bold;
-    font-size: 1em;
-    /* text-align: center; */
-    padding: 2px 5px;
-}
-.cf-bg{
-    border-top: var(--boroder-check);
-    background-color: var(--cfff);
-    transform: translateY(0%);
-    transition: transform ease-in-out .3s;
-    z-index: 1;
-}
-.card:hover > .card-footer > .cf-text{
-    color: var(--cfff);
-}
-.card:hover > .card-footer > .cf-bg{
-    transform: translateY(calc(100% - 0px));
 }
 
-.card:nth-child(1){
-    color: aqua;
-}
 /* ----------------------- */
 @media (max-width: 1000px){
     .homelogo{
@@ -233,7 +160,6 @@ main{
     width: 80px;
     height: 80px;
     transition: width .7s ease, height .7s ease;
-    transition: width .7s ease, height .7s ease;
     border: var(--boroder-check);
     /* border-color: var(--cfff); */
     border-radius: 50%;
@@ -248,3 +174,79 @@ main{
     height: 150px;
 }
 /* ----------------------- */
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    grid-auto-rows: auto;
+    grid-gap: 12px;
+}
+li.card{
+    aspect-ratio: 4/2.8;
+    /* border: var(--boroder-check); */
+    border-radius: var(--boroder-radius);
+    transition: scale ease-in-out .3s;
+}
+li.card:hover{
+    scale: .93;
+}
+li.card a{
+    /* border: var(--boroder-check); */
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.cardin1,
+.cardin2{
+    width: 100%;
+}
+.cardin1{
+    position: relative;
+    z-index: 0;
+    height: calc(100% - 2em);
+    overflow: hidden;
+    border-radius: var(--boroder-radius);
+}
+.cardin1 img{
+    width: 100%;
+}
+.cardin1 .gr{
+    position: absolute;top: 0;left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+}
+.cardin1 .more{
+    position: absolute;top: 0;left: 0;
+    z-index: 11;
+    /* background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); */
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity ease-in-out .2s;
+}
+.cardin1 .more span{
+    border: var(--boroder-check);
+    border-color: var(--cfff);
+    color: var(--cfff);
+    padding: 10px 20px;
+}
+li.card a:hover  .cardin1 .more{
+    opacity: 100%;
+}
+.cardin1 .more span:hover{
+    background-color: var(--ceee);
+    color: var(--c000);
+}
+.cardin2{
+    height: 2em;
+    padding: 7px;
+}
+.cardin2 span{
+    font-size: 1em;
+    font-weight: bold;}
