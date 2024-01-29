@@ -222,6 +222,23 @@ li.card a:hover  .cardin1 .more{
 }
    
 /* ----------------------- */
+.indexmain{
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cursor .s1{
+    position: fixed;
+    top: 0;left: -40px;
+}
+.cursor .s2{
+    position: fixed;
+    top: 30%;right: -90px;
+}
+/* ----------------------- */
 .dpnone{
     display: none;
 }
@@ -238,6 +255,7 @@ li.card a:hover  .cardin1 .more{
     left: 0;
     transform: translate(-50%,-50%);
     z-index: 0;
+    /* mix-blend-mode:difference; */
 }
 .cursor.active {
     width: 150px;
