@@ -220,39 +220,113 @@ li.card a:hover  .cardin1 .more{
     font-size: 1em;
     font-weight: bold;
 }
-   
+
 /* ----------------------- */
 .indexmain{
     /* position: fixed;
     top: 0;left: 0; */
-    width: 100%;height: 100%;
+    width: 100%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.c{
+    width: 70px;
+    height: 70px;
+    transition: width .7s ease, height .7s ease;
+    border: var(--boroder-check);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 0;
+    opacity: 0;
+    animation: cstart 2s ease-in-out .5s 1 normal;
+    animation-fill-mode:forwards;
+    background-color: #fff;
+    
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.cursor .s1{
+.c .type{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clink{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+.clink.works{
+    top: 100%;
+}
+.clink.about{
+    top: 0%;
+}
+@keyframes cstart {
+    0%{opacity: 0;}
+    100%{
+        opacity: 100;
+        width: 300px;
+        height: 300px;
+        /* width: 200px;
+        height: 200px; */
+    }
+}
+.c .s1{
     position: fixed;
     top: -10%;left: -3%;
 }
-.cursor .s2{
+.c .s2{
     position: fixed;
     top: 30%;right: -20%;
 }
-.cursor .s3{
+.c .s3{
     position: fixed;
     bottom: -5%;left: -25%;
 }
-.cursor .s4{
+.c .s4{
     position: fixed;
     top: 38%;left: -30%;
 }
-.cursor .s5{
+.c .s5{
     position: fixed;
     top: 80%;right: -20%;
 }
-.cursor .s6{
+.c .s6{
     position: fixed;
     top: -10%;right: -8%;
+}
+@keyframes supdown {
+    0%{transform: translateY(0%);}
+    100%{transform: translateY(50%);}
+}
+.c .s1,
+.c .s2,
+.c .s3,
+.c .s4,
+.c .s5,
+.c .s6{
+    z-index: 1;
+    animation: supdown .75s ease-in-out infinite alternate;
+}
+.c .s2{animation-delay: 2.1s;}
+.c .s3{animation-delay: 2.2s;}
+.c .s4{animation-delay: 2.3s;}
+.c .s5{animation-delay: 2.4s;}
+.c .s6{animation-delay: 2.5s;}
+.indexmain .cursor{
+    background-color: var(--cfff);
+    mix-blend-mode:difference; 
 }
 /* ----------------------- */
 .dpnone{
@@ -264,14 +338,12 @@ li.card a:hover  .cardin1 .more{
     height: 70px;
     transition: width .7s ease, height .7s ease;
     border: var(--boroder-check);
-    /* border-color: var(--cfff); */
     border-radius: 50%;
     position: fixed;
     top: 0;
     left: 0;
     transform: translate(-50%,-50%);
     z-index: 0;
-    /* mix-blend-mode:difference; */ 
 }
 .cursor.active {
     width: 150px;
