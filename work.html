@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Baek JongWhoun</title>
+</head>
+<body>
+    <header>
+        <div class="home">
+            <a href="./index.html">
+                <h1 class="homelogo">Baek Jongwhoun</h1>
+            </a>
+        </div>
+        <input type="checkbox" id="menu-btn-checkbox" class="dpnone" onchange="mf()">
+        <label for="menu-btn-checkbox" class="menu-btn">
+            <i class="fa-solid fa-plus"></i>
+        </label>
+    </header>
+    <div class="menubg dpnone" onclick="menuclose()"></div>
+    <section class="menu" id="menu">
+        <div class="topsizing">
+            <div class="home">
+                <h1 class="homelogo homelogo2">Baek Jongwhoun</h1>
+            </div>
+            <label class="menu-btn menu-btn2"><i class="fa-solid fa-plus"></i></label>
+        </div>
+        <div class="menuitem" id="menu-about"><a href="./about.html"><h2>about</h2></a></div>
+        <div class="menuitem" id="menu-works"><a href="./work.html"><h2>works</h2></a></div>
+        <div class="menuitem menu-sns" id="menu-instagram"><a href="https://www.instagram.com/koa.lifeeee" target="_blank"><h3><i class="fa-brands fa-instagram"></i></h3></a></div>
+        <div class="menuitem menu-sns" id="menu-github"><a href="https://github.com/OriginalAnswer" target="_blank"><h3><i class="fa-brands fa-github"></i></h3></a></div>
+    </section>
+    <div class="topsizing">
+        <div class="home">
+            <h1 class="homelogo">Baek Jongwhoun</h1>
+        </div>
+        <label class="menu-btn"><i class="fa-solid fa-plus"></i></label>
+    </div>
+    <main>
+        <div class="cursor"></div>
+        <ol class="container">
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/new year letter.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>새해 편지</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/kakaoinviting.jpg">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>모바일 청첩장</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/personal homepage.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>Personal Homepage</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/clock_realtime.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>Real Time Clock "Sun&Moon"</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/clock_todo.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>Real Time Clock and Todo List</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/clock_analoge.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>Real Time Clock "Analoge"</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/color generator linear gradient 2.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>Color Generator Linear Gradient 2</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/color generator linear gradient.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>Color Generator Linear Gradient</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/color generator rgba.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>Color Generator RGBA</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/color generator rgb.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>Color Generator RGB</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/color generator rgb-hex.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>Color Generator RGB-hex</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/Color Picker Random.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>Color Picker Random</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/color picker 4 of random.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>Color Picker 4 of Random</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/animation timing checker.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>Animation Timing Checker</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/animation timing checker-cubicbezier.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>Animation Timing Checker-CubicBezier</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/kakaotalk clone.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>카카오톡 Clone</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/lotto generator.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>로또번호 추첨기</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/rotate.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>Rotate</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/mac_note.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>Mac Note</span>
+                    </div>
+                </a>
+            </li>
+            <li class="card">
+                <a href="">
+                    <div class="cardin1">
+                        <img src="./img/link page.png">
+                        <div class="gr"></div>
+                        <div class="more">
+                            <span>more...</span>
+                        </div>
+                    </div>
+                    <div class="cardin2">
+                        <span>Links Page</span>
+                    </div>
+                </a>
+            </li>
+        </ol>
+    </main>
+    <footer></footer>
+    <script>
+        const mc = document.getElementById('menu-btn-checkbox');
+        const menu = document.getElementById('menu');
+        const menubg = document.querySelector('.menubg');
+        function mf(){
+            let v = event.target.checked;
+            if (v === true) {
+                menu.style.transform = 'translateY(0%)'
+                menubg.classList.remove('dpnone');
+            } else {
+                menu.style.transform = 'translateY(-100%)'
+                menubg.classList.add('dpnone');
+            }
+        }
+        function menuclose(){
+            mc.checked = false;
+            menu.style.transform = 'translateY(-100%)'
+            menubg.classList.add('dpnone');
+        }
+        // 커서
+        const cursor = document.querySelector('.cursor');
+        window.addEventListener('mousemove',(e)=>{
+            const X = e.clientX;
+            const Y = e.clientY;
+            cursor.style.left = `${X}px`;
+            cursor.style.top = `${Y}px`;
+            cursor.classList.add('active');
+                clearTimeout(cursor.timer);
+                cursor.timer = setTimeout(() => {
+                    cursor.classList.remove('active');
+                }, 290);
+        });
+
+    </script>
+    <script src="./header.js"></script>
+    <script src="https://kit.fontawesome.com/e4704dcbbd.js" crossorigin="anonymous"></script>
+</body>
+</html>
