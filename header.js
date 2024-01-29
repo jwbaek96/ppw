@@ -6,7 +6,7 @@ window.addEventListener('scroll', () => {
     const homelogo2 = document.querySelector('.homelogo2');
     const menuBtn2 = document.querySelector('.menu-btn2');
     let y = window.scrollY;//현재 스크롤 위치
-    if (y > targetY + 100) {
+    if (y > targetY + 90) {
         // h.classList.remove('dpnone')
         // h.style.opacity = '1';
         homelogo.style.fontSize = '1.5em';
