@@ -261,17 +261,16 @@ li.card a:hover  .cardin1 .more{
 }
 .clink{
     position: absolute;
-    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 0;
+    z-index: 1;
     transition: font-size ease-in-out .3s;
 }
 .clink.works{
-    top: 100%;
+    top: calc(50% - 150px);
 }
 .clink.about{
-    top: 0%;
+    top: calc(50% + 150px);
 }
 .clink:hover{
     font-size: 1.5em;
@@ -329,10 +328,9 @@ li.card a:hover  .cardin1 .more{
 .c .s5{animation-delay: 2.4s;}
 .c .s6{animation-delay: 2.5s;}
 .indexmain .cursor{
-    /* background-color: var(--cfff);
-    mix-blend-mode:difference;  */
-    z-index: 1;
-
+    /* background-color: var(--cfff); */
+    /* mix-blend-mode:difference;  */
+    /* z-index: 1; */
 }
 /* ----------------------- */
 .dpnone{
