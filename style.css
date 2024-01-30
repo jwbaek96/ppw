@@ -243,11 +243,11 @@ li.card a:hover  .cardin1 .more{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 0;
+    z-index: 1;
     opacity: 0;
     animation: cstart 2s ease-in-out .5s 1 normal;
     animation-fill-mode:forwards;
-    background-color: #fff;
+    /* background-color: #fff; */
     
     display: flex;
     justify-content: center;
@@ -264,13 +264,17 @@ li.card a:hover  .cardin1 .more{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 10;
+    z-index: 0;
+    transition: font-size ease-in-out .3s;
 }
 .clink.works{
     top: 100%;
 }
 .clink.about{
     top: 0%;
+}
+.clink:hover{
+    font-size: 1.5em;
 }
 @keyframes cstart {
     0%{opacity: 0;}
@@ -316,7 +320,7 @@ li.card a:hover  .cardin1 .more{
 .c .s4,
 .c .s5,
 .c .s6{
-    z-index: 1;
+    z-index: 0;
     animation: supdown .75s ease-in-out infinite alternate;
 }
 .c .s2{animation-delay: 2.1s;}
@@ -325,8 +329,10 @@ li.card a:hover  .cardin1 .more{
 .c .s5{animation-delay: 2.4s;}
 .c .s6{animation-delay: 2.5s;}
 .indexmain .cursor{
-    background-color: var(--cfff);
-    mix-blend-mode:difference; 
+    /* background-color: var(--cfff);
+    mix-blend-mode:difference;  */
+    z-index: 1;
+
 }
 /* ----------------------- */
 .dpnone{
