@@ -315,6 +315,7 @@ li.card a:hover  .cardin1 .more{
 }
 .clink:hover{
     font-size: 1.5em;
+    font-weight: bold;
 }
 @keyframes op0100 {
     0%{opacity: 0;}
@@ -372,11 +373,94 @@ li.card a:hover  .cardin1 .more{
 .c .s4{animation-delay: 2.3s;}
 .c .s5{animation-delay: 2.4s;}
 .c .s6{animation-delay: 2.5s;}
-.indexmain .cursor{
-    /* background-color: var(--cfff); */
-    /* mix-blend-mode:difference;  */
-    /* z-index: 1; */
+/* .indexmain .cursor{
+    background-color: var(--cfff);
+    mix-blend-mode:difference; 
+    z-index: 1;
+} */
+/* 어바웃 */
+.aboutmain{
+    position: relative;
+    display: block;
+    padding: 30px 30px;
 }
+.aboutmain article{
+    /* border: var(--boroder-check); */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 2;
+
+}
+.aboutmain article div{
+    /* border: var(--boroder-check); */
+    z-index: 10;
+}
+.a1{
+    gap: 50px;
+}
+.a1-1{
+    /* border: #000 solid 1px; */
+    box-shadow: 2px 2px 5px 5px #00000020;
+    width: 100%;
+    aspect-ratio: 1/1;
+    max-height: 350px;
+    max-width: 350px;
+    background: url(./img/p1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation: profile_border 8s ease-in-out infinite;
+    /* z-index: 100; */
+}
+@keyframes profile_border {
+    0%{border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;}
+    50%{border-radius: 40% 60% 70% 40% / 40% 60% 40% 60%;}
+    100%{border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;}
+}
+.a1-2{
+    display: block;
+    margin: auto 0;
+}
+.a1-2 div{
+}
+.a1-2-1{
+    font-weight: 800;
+    font-size: 3em;
+}
+.contect-container{
+    display: block;
+}
+.contect-container>div:nth-child(1){
+    padding: 10px 15px;
+    font-weight: bold;
+}
+.contect-btn-container{
+    display: flex;
+}
+.contect-btn{
+    padding: 10px 15px;
+    border: 3px solid #ffffff75;
+    border-radius: var(--boroder-radius);
+}
+.contect-btn:hover{
+    scale: .98;
+}
+.contect-btn-ig{
+    background: linear-gradient(135deg, rgba(92, 100, 255, 0.986) 0%, rgb(166, 0, 255) 100%);
+    color: var(--cfff);
+}
+.contect-btn-email{
+    /* background: linear-gradient(0deg, rgba(210, 212, 255, 0.986) 0%, rgb(0, 0, 0) 100%); */
+    background-color: #c9c9c9;
+}
+
+
+
+
+
+
 /* ----------------------- */
 .dpnone{
     display: none;
