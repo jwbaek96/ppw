@@ -423,21 +423,44 @@ li.card a:hover  .cardin1 .more{
     display: block;
     margin: auto 0;
 }
-.a1-2 div{
+/* .a1-2 div{
+} */
+
+.quick-info{
+    padding: 10px 15px;
+    text-align: center;
 }
-.a1-2-1{
-    font-weight: 800;
+.quick-info>div:nth-child(1){
+    font-weight:bold;
     font-size: 3em;
+}
+.quick-info>div:nth-child(2){
+    padding: 0 5px;
+    /* font-weight:700; */
+    font-size: 1em;
+    color: #7f7f7f;
 }
 .contect-container{
     display: block;
 }
-.contect-container>div:nth-child(1){
-    padding: 10px 15px;
+.contect-title-container{
+    padding: 10px 30px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contect-title-line,
+.contect-title{
+    width: 33%;
+    text-align: center;
+}
+.contect-title-line{
+    border: var(--boroder-check);
 }
 .contect-btn-container{
     display: flex;
+    gap: 7px;
 }
 .contect-btn{
     padding: 10px 15px;
@@ -456,6 +479,10 @@ li.card a:hover  .cardin1 .more{
     background-color: #c9c9c9;
 }
 
+.a2{
+    text-align: center;
+    padding: 10px 15px;
+}
 
 
 
