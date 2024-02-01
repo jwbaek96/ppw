@@ -118,7 +118,6 @@ header{
 }
 /* ----------------------- */
 main{
-    padding: 20px 5px 5px 5px;
     width: 100%;
     background-color: var(--cfff);
 }
@@ -144,9 +143,10 @@ main{
 }
 /* ----------------------- */
 .container{
+    padding: 20px 5px 5px 5px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     grid-auto-rows: auto;
     grid-gap: 12px;
 }
@@ -226,7 +226,7 @@ li.card a:hover  .cardin1 .more{
     /* position: fixed;
     top: 0;left: 0; */
     width: 100%;
-    height: 95%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -234,8 +234,8 @@ li.card a:hover  .cardin1 .more{
     overflow: hidden;
 }
 .c{
-    width: 70px;
-    height: 70px;
+    width: 30px;
+    height: 30px;
     transition: width .7s ease, height .7s ease;
     border: var(--boroder-check);
     border-radius: 50%;
@@ -253,11 +253,50 @@ li.card a:hover  .cardin1 .more{
     justify-content: center;
     align-items: center;
 }
-.c .type{
-    width: 100%;
+.indexmain-text-container-container{
+    width: 300px;
+    height: 300px;
+    transition: width .7s ease, height .7s ease;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    animation: cstart 2s ease-in-out .5s 1 normal;
+    animation-fill-mode:forwards;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+/* .indexmain-text-container{
+} */
+.indexmain-text{
+    position: relative;
+}
+.indexmain-text-1::before,
+.indexmain-text-2::before,
+.indexmain-text-3::before{
+    content: "";
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;height: 100%;
+    background-color: #ffffff;
+    animation: typing 1.5s steps(24) forwards;
+}
+.indexmain-text-1::before{
+    animation-delay: 3s;
+}
+.indexmain-text-2::before{
+    animation-delay: 4.3s;
+}
+.indexmain-text-3::before{
+    animation-delay: 5.9s;
+}
+@keyframes typing {
+    0%{left: 0%;}
+    100%{left: 100%;}
 }
 .clink{
     position: absolute;
@@ -265,15 +304,21 @@ li.card a:hover  .cardin1 .more{
     transform: translate(-50%,-50%);
     z-index: 1;
     transition: font-size ease-in-out .3s;
+    animation: op0100 1.5s ease-in-out 2s 1 normal forwards;
+    opacity: 0;
 }
 .clink.works{
-    top: calc(50% - 150px);
+    top: calc(50% + 150px);
 }
 .clink.about{
-    top: calc(50% + 150px);
+    top: calc(50% - 150px);
 }
 .clink:hover{
     font-size: 1.5em;
+}
+@keyframes op0100 {
+    0%{opacity: 0;}
+    100%{opacity: 100;}
 }
 @keyframes cstart {
     0%{opacity: 0;}
