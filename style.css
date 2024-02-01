@@ -136,6 +136,24 @@ main{
         margin: 0 10px;
     }
 }   
+@media (max-width: 700px){
+    .homelogo{
+        font-size: 2.5em;
+    }
+    .menu-btn{
+        font-size: 2.2em;
+        margin: 0 10px;
+    }
+}   
+@media (max-height: 550px){
+    .homelogo{
+        font-size: 2.5em;
+    }
+    .menu-btn{
+        font-size: 2.2em;
+        margin: 0 10px;
+    }
+}   
 @media (max-width: 470px){
     .main{
         padding: 0;
@@ -452,7 +470,7 @@ li.card a:hover  .cardin1 .more{
 }
 .contect-title-line,
 .contect-title{
-    width: 33%;
+    width: 30%;
     text-align: center;
 }
 .contect-title-line{
@@ -461,6 +479,7 @@ li.card a:hover  .cardin1 .more{
 .contect-btn-container{
     display: flex;
     gap: 7px;
+    justify-content: center;
 }
 .contect-btn{
     padding: 10px 15px;
@@ -480,14 +499,22 @@ li.card a:hover  .cardin1 .more{
 }
 
 .a2{
-    text-align: center;
     padding: 10px 15px;
 }
-
-
-
-
-
+.a2-1,
+.a2-2{
+    text-align: center;
+    padding: 10px 20px 0px 10px;
+    width: 100%;
+    font-weight: bold;
+    /* align-self: center; */
+}
+.quote-icon{
+    /* font-weight: bold; */
+    color: #aeaeae; 
+    font-size: 2em;
+    margin: 20px;
+}
 /* ----------------------- */
 .dpnone{
     display: none;
