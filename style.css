@@ -72,7 +72,7 @@ header{
 .homelogo{ 
     /* border: var(--boroder-check); */
     text-transform: uppercase;
-    font-size: 8em;
+    font-size: 5em;
     cursor: pointer;
     transition: font-size ease-in-out .2s;
 }
