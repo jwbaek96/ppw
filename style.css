@@ -284,7 +284,7 @@ li.card a:hover  .cardin1 .more{
     transform: translate(-50%,-50%);
     z-index: 1;
     transition: font-size ease-in-out .3s;
-    animation: op0100 1.5s ease-in-out 2s 1 normal forwards;
+    animation: op0100 1.2s ease-in-out 2s 1 normal forwards;
     opacity: 0;
 }
 .clink.works{
